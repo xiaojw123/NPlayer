@@ -1,0 +1,45 @@
+/* pages/slist/slit.wxss */
+page{
+background-color: #fdefde
+}
+.top_container {
+  width: 100%;
+  height: 180px;
+  position: relative;
+}
+
+.top_img {
+  width: 100%;
+  height: 180px;
+  
+}
+
+.top_update {
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+}
+.bg_view{
+  widows: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.4;
+  position: fixed;
+  z-index: 999;
+  top: 0
+}
+
+.song_item{
+   width: 100%;
+   height: auto;
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-top: 10px;
+   padding-bottom: 10px
+}
+.song_singer{
+   display: flex;
+   flex: 1
+}

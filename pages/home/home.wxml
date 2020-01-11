@@ -1,0 +1,96 @@
+<!--pages/home/home.wxml-->
+<wxs module="common">
+  var fm = function(name) {
+    var sstr = name.split("-")
+    var s = sstr[0]
+    return s.trim()
+
+  }
+  var data = "fdafaf";
+
+  module.exports = {
+
+    fm: fm
+    data: data
+  }
+</wxs>
+
+
+
+<view>
+
+
+  <swiper indicator-dots="true">
+
+
+    <block wx:for="{{recommendslider}}" wx:key="{{index}}">
+
+
+      <swiper-item>
+        <image class="banner_img" mode="widthFix" src="{{item}}" />
+      </swiper-item>
+    </block>
+
+  </swiper>
+
+
+  <view class="raido_container">
+    <!-- <view class="zone_title">达人歌单</view> -->
+    <!-- <view class="ra_item_container">
+      <block wx:for="{{recommendradioList}}" wx:key="{{index}}">
+        <view class="raido_item">
+          <image class="raido_item_img" mode="widthFix" src="{{item.picUrl}} " />
+        </view>
+      </block>
+      <image/> --> 
+
+    <!-- <!-- </view> -->
+    <view class="rank_container">
+      <view class="zone_title">QQ音乐排行榜</view>
+
+
+      <view class="rank_list_container">
+
+        <block wx:for="{{rankList}}" wx:key="{{index}}">
+
+
+          <view class="rank_item_container"
+          data-id="{{item.id}}"
+          bindtap="gotSongList"
+          >
+
+            <view class="rank_item_list">
+
+
+              <view>{{item.title}}</view>
+
+              <view class="rank_item">
+
+                <block wx:for="{{item.songList}}" wx:key="{{index}}">
+
+
+                  <view class="rank_item_conent">{{index+1}}. {{common.fm(item.songName)}}-{{item.singerName}}</view>
+
+                </block>
+
+              </view>
+
+            </view>
+
+
+
+            <image class="rank_item_img" mode="scaleToFill" src="{{item.picUrl}}" />
+          </view>
+        </block>
+      </view>
+
+
+
+    </view>
+
+
+
+
+
+  </view>
+</view>

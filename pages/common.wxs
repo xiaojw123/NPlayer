@@ -1,0 +1,35 @@
+
+// var BASE_URL="www.ba"
+// var request = function(url, method,data) {
+//   let promise = new Promise((resolve, reject) => {
+
+//       title: '加载中'
+//     wx.showLoading({
+//     })
+//     wx.request({
+//       url: BASE_URL+url,
+//       method:method,
+//       data:{
+//         datas:data
+//       },
+//       success: function(res) {
+//         wx: wx.hideLoading()
+//         if (res.statusCode == 200) {
+//           resolve(res)
+//         } else {
+//           rejectr(res.data)
+//         }
+
+//       },
+//       fail: function(res) {
+//         wx: wx.hideLoading()
+//         reject("请求超时")
+//       }
+//     })
+
+
+//   })
+//   return promise
+
+
+// }

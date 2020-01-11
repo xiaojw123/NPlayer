@@ -1,0 +1,14 @@
+var symb=function getSymbol(index){
+  console.log("sfdsf__"+index)
+  if(index>0){
+
+    return "/"
+  }
+
+
+}
+module.exports ={
+
+  symb: symb
+
+}

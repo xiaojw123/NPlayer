@@ -1,0 +1,38 @@
+<!--pages/slist/slit.wxml-->
+<wxs src="slit.wxs" module="tool"/>
+
+
+<view>
+
+
+
+  <view class="songitem_container">
+    <block wx:for="{{songList}}" wx:key="index">
+
+      <view class="song_item">
+
+        <view class="song_name">
+          {{index+1}} {{item.songName}}
+        </view>
+        <view class="song_singer">
+        <block wx:for="{{item.singer}}"
+        wx:for-index="sindex"
+        >
+         <view>
+           {{tool.symb(sindex)}}{{item.singerName}}
+         </view>
+
+        </block>
+          
+       
+        </view>
+      </view>
+
+    </block>
+
+  </view>
+
+
+
+
+</view>
